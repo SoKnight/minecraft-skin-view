@@ -5,7 +5,7 @@ import javafx.scene.input.ScrollEvent;
 import javafx.scene.transform.Rotate;
 import lombok.Getter;
 import lombok.Setter;
-import me.soknight.javafx.minecraft.skin.view.SkinCanvas;
+import me.soknight.javafx.minecraft.skin.SkinCanvas;
 
 public class SkinCanvasBehavior {
 

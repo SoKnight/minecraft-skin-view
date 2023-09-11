@@ -47,4 +47,10 @@ public final class ArrayUtils {
         return joined;
     }
 
+    public static int[] createFilled(int size, int value) {
+        int[] array = new int[size];
+        Arrays.fill(array, value);
+        return array;
+    }
+
 }
