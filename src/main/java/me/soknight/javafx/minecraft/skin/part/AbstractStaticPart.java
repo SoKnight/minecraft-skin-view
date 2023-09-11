@@ -23,7 +23,7 @@ public abstract class AbstractStaticPart extends AbstractSkinPart {
         this.innerLayer = new SkinMeshView(dimensions, createInnerLayer());
         this.secondLayer = new SkinMeshView(dimensions, createSecondLayer());
 
-        getChildren().addAll(secondLayer, innerLayer);
+        getChildren().addAll(innerLayer, secondLayer);
     }
 
     protected abstract Mesh createInnerLayer();

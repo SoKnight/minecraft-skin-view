@@ -29,7 +29,7 @@ public abstract class AbstractDynamicPart extends AbstractSkinPart implements Sl
         this.innerLayerMesh = new Pair<>(this::createInnerLayer);
         this.secondLayerMesh = new Pair<>(this::createSecondLayer);
 
-        getChildren().setAll(secondLayer, innerLayer);
+        getChildren().setAll(innerLayer, secondLayer);
     }
 
     @Override

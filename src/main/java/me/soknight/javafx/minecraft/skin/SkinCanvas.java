@@ -3,7 +3,6 @@ package me.soknight.javafx.minecraft.skin;
 import javafx.scene.*;
 import javafx.scene.image.Image;
 import javafx.scene.paint.PhongMaterial;
-import javafx.scene.shape.Box;
 import javafx.scene.shape.Shape3D;
 import javafx.scene.transform.Rotate;
 import javafx.scene.transform.Scale;
@@ -60,17 +59,10 @@ public class SkinCanvas extends Group {
 
         this.material = new PhongMaterial();
         this.canvas = new Group(head, body, leftArm, rightArm, leftLeg, rightLeg);
-//        this.canvas = new Group(prepareBox());
         this.canvas.getTransforms().addAll(rotateX);
 
         bindMaterial();
         getChildren().setAll(createSubScene(width, height, msaa, ambientLight));
-    }
-
-    private Box prepareBox() {
-        Box box = new Box(8D, 8D, 8D);
-        box.setMaterial(material);
-        return box;
     }
 
     public void updateSkin(Image skinImage, boolean slim) {
@@ -141,7 +133,7 @@ public class SkinCanvas extends Group {
     private SubScene createSubScene(double width, double height, boolean msaa, boolean ambientLight) {
         Group group = new Group();
         group.getChildren().add(createPlayerModel());
-        group.getTransforms().add(rotateZ);
+//        group.getTransforms().add(rotateZ);
 
         if (ambientLight) {
             group.getChildren().add(new AmbientLight());
